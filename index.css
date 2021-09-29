@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+body {
+  background-color: gray;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  max-width: 1140px;
+  background-color: lime;
+  margin: 10px auto;
+  position: relative;
+}
+
+.animated-arnold {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+
+  animation: arnold-animation 30s ease infinite;
+}
+
+/***** Start Image sectiom ******/
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.img-xs-small {
+  width: 20%;
+  height: 400px;
+  background-color: rgb(214, 224, 214);
+}
+
+.img-small {
+  width: 30%;
+  height: 200px;
+  background-color: indigo;
+  border-radius: 10px;
+}
+
+.img-large-container {
+  position: relative;
+  width: 50%;
+  cursor: pointer;
+}
+
+.img-large {
+  width: 100%;
+  background-color: lavenderblush;
+  height: 400px;
+  position: relative;
+}
+
+.inner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width: 100%;
+  background-color: blue;
+  box-shadow: 0 0 1px 8px #00000088;
+  transition: 0.3s ease;
+  transform: scale(0) rotate(0);
+}
+
+.img-large-container:hover .inner-img {
+  transform: scale(1.2) rotate(360deg);
+}
+/***** End image section ******/
+
+/****** Start Keyframes ******/
+@keyframes arnold-animation {
+  0%,
+  100% {
+    top: 50px;
+    left: 50px;
+    transform: rotate(0);
+  }
+  25% {
+    top: 90%;
+    left: 50px;
+    transform: rotate(0);
+  }
+  27% {
+    top: 90%;
+    left: 50px;
+    transform: rotate(90deg);
+  }
+  50% {
+    top: 90%;
+    left: 90%;
+    transform: rotate(90deg);
+  }
+  52% {
+    top: 90%;
+    left: 90%;
+    transform: rotate(180deg);
+  }
+  75% {
+    top: 50px;
+    left: 90%;
+    transform: rotate(180deg);
+  }
+  99% {
+    top: 50px;
+    left: 50px;
+    transform: rotate(-180deg);
+  }
+}
+/***** End keyframes *****/
