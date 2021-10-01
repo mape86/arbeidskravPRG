@@ -131,6 +131,7 @@ p {
  80%{transform: translate(0,+63vh);}   
  to{transform: translate(0,0);}
 }
+
 /* Sounds */
 #arnold-clothes:active + #arnold-clothes-mp3 { 
     display: block; 
