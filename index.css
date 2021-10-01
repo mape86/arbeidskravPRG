@@ -5,31 +5,40 @@
 html,
 body {
   width: 100%;
-  min-height: 100vh;
+  min-height: 98vh;
   margin: 0;
 }
 
 body {
-  background-color: black;
-  animation-name: black-start;
-  /* opacity: 0;
-  animation-duration: 8s;
-  animation-delay: 8s;
-  animation-fill-mode: forwards;*/
+  background-color: #000000;
+  position: relative;
 }
 
-#resolutionDiv {
-  height: 768px;
-  width: 1024;
+#fading-arnold {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 25px;
+  opacity: 0;
+  animation-name: fade-in-arnold;
+  animation-duration: 8s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
 }
 
 main {
   display: flex;
   width: 100%;
   max-width: 1140px;
-  background-color: lime;
   margin: 10px auto;
   position: relative;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 6s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
 }
 
 /***** Start Image sectiom ******/
@@ -43,39 +52,56 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0;
+  padding: 5px 5px;
 }
 
 .img-xs-small {
   width: 20%;
   height: 300px;
-  background-color: rgb(214, 224, 214);
+  border-radius: 10px;
 }
 
 .img-small {
   width: 30%;
   height: 200px;
-  background-color: indigo;
   border-radius: 10px;
 }
 
 .img-large-container {
   position: relative;
   width: 50%;
-  cursor: pointer;
+  cursor: default;
+}
+
+#enter-link {
+  /*img-large-container is this links parent*/
+  text-align: center;
+  padding: 10px 15px;
+  color: red;
+  border: 2px solid red;
+  border-radius: 4px;
+  cursor: crosshair;
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+  transition: 0.3s ease;
+  text-decoration: none;
+  z-index: 1; /*Needs z-index to be over images because of hirarchy structure in HTML*/
+  animation-name: enter-link-ani;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+#enter-link:hover {
+  border-color: #fff;
+  color: #fff;
 }
 
 #img-large {
   width: 100%;
-  background-color: lavenderblush;
   height: 350px;
   position: relative;
-
-  z-index: 1;
-  /*  animation-name: arnold-before-ani;
-  animation-delay: 5s;
-  animation-duration: 7s;
-  animation-fill-mode: forwards; */
 }
 
 #inner-img {
@@ -85,40 +111,57 @@ main {
   height: 350px;
   width: 100%;
   opacity: 0;
-  z-index: 2;
-  animation-name: arnold-after-ani;
-  animation-delay: 5s;
-  animation-duration: 2.5s;
-  animation-fill-mode: forwards;
+  transform: scale(1.05);
+  transition: 0.5s ease;
 }
 
-.center-img:hover {
-  animation: arnold-before-ani;
-  animation: arnold-after-ani;
+/*Hover the link to make the inner-img visible function*/
+#enter-link:hover ~ #inner-img {
+  opacity: 1;
 }
 
 /***** End image section ******/
+/***animation section***/
+.left-side-animation {
+  border: 1px solid red;
+}
 
+.right-side-animation {
+  border: 1px solid blue;
+}
+
+#box-three {
+  position: absolute;
+  top: 100px;
+  left: 1500px;
+  background-color: rgb(7, 7, 248);
+  height: 100px;
+  width: 100px;
+  border-radius: 10%;
+  margin: 0;
+  padding: 50px 0px 0px 0px;
+  animation: box-ani-right;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+#box-four {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  height: 50px;
+  width: 50px;
+  border-radius: 10%;
+  animation: box-ani-right;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+/***end of animation section***/
 /****** Start Keyframes ******/
-/* @keyframes black-start {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}*/
-
-/* @keyframes arnold-before-ani {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-} */
-
-@keyframes arnold-after-ani {
+@keyframes fade-in {
   from {
     opacity: 0;
   }
@@ -127,4 +170,64 @@ main {
   }
 }
 
+@keyframes fade-in-arnold {
+  0% {
+    opacity: 0;
+    z-index: -1;
+  }
+  50% {
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes enter-link-ani {
+  0% {
+    border: 2px solid red;
+    color: red;
+  }
+  25% {
+    border: 4px solid hotpink;
+    color: indigo;
+  }
+  50% {
+    border: 6px solid magenta;
+    color: blue;
+  }
+  51% {
+    border: 6px solid magenta;
+    color: blue;
+  }
+  75% {
+    border: 4px solid hotpink;
+    color: hotpink;
+  }
+  100% {
+    border: 2px solid red;
+    color: red;
+  }
+}
+
+/* @keyframes box-ani-right {
+  0% {
+    transform: rotate(0deg);
+    right: 100px;
+    top: 22.5px;
+  }
+
+  50% {
+    transform: rotate(360deg);
+    right: 100px;
+    top: 350px;
+  }
+
+  100% {
+    transform: rotate(720deg);
+    right: 100px;
+    top: 700px;
+  }
+} */
 /***** End keyframes *****/
