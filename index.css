@@ -129,7 +129,7 @@ main {
 .right-side-animation {
   border: 1px solid blue;
 }
-
+/*Any suggestions for this animation? Maybe put in some sort of action when hoverd and paused?*/
 #box-three {
   position: absolute;
   top: 100px;
