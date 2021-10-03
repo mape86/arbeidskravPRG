@@ -54,6 +54,7 @@ body {
     border-radius: 5%;
     font-family: Arial, Helvetica, sans-serif;
     color: #FFFFFF;
+    z-index: 2;
 }
 
 .main-content-element-img {
@@ -94,45 +95,313 @@ p {
 /* Animation div */
 
 .animation-div-container{
-    position: relativ;
+    position: fixed;
     z-index: 0;
-    bottom: 0vh;
-    height: 75%;
+    top: 150px;
+    height: 600px;
     width: 100vw;
     background-color: transparent;
+    z-index: 1;
 }
 
 .animation-div {
+    position: absolute;
     height: 100px;
     width: 100px;
-    background-color: #7750d9;
+    background-color: transparent;
     border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    left: 50%;
+    opacity: 0;
 }
-#animation-div-1 {
+.animation-follow-div-one {
     position: absolute;
-    left: 0vh;
-    top: 25vh;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 250ms;
+    left: 50%;
+    opacity: 0;
 }
 
-#animation-div-2 {
+.animation-follow-div-two {
     position: absolute;
-    right: 0vh;
-    top: 25vh;
-    animation: slide 20s infinite;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 500ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-three {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 750ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-four {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 1000ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-five {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 1250ms;
+    left: 50%;
+    opacity: 0;
+}
+.animation-follow-div-six {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 1500ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-seven {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 1750ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-eight {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 2000ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-nine {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 2250ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-ten {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 2500ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-eleven {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 2750ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-twelve {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 3000ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-thirteen {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 3250ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-fourteen {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 3500ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-fifteen {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 3750ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-sixteen {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 4000ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-seventeen {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 4250ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-eighteen {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 4500ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-nineteen {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 4750ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.animation-follow-div-twenty {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border-radius: 100%;
+    animation: rightSlideOne 4s linear infinite;
+    animation-delay: 4000ms;
+    left: 50%;
+    opacity: 0;
+}
+
+.arnold-head-one {
+    transform: translate(50%, 5%);
+    width: 100px;
+}
+.arnold-head-two {
+    transform: translate(100%, 10%);
+    width: 100px;
+}
+.arnold-head-three {
+    transform: translate(150%, 15%);
+    width: 100px;
+}
+.arnold-head-four {
+    transform: translate(200%, 20%);
+    width: 100px;
+}
+.arnold-head-five {
+    transform: translate(250%, 25%);
+    width: 100px;
 }
 
 /* Animations */
-@keyframes slide {
- from{transform: translate(0,0);}
- 16%{transform: translate(0,+63vh);}
- 32%{transform: translate(-94.5vw,+63vh);}
- 48%{transform: translate(-94.5vw,0);}
- 64%{transform: translate(-94.5vw,+63vh);}
- 80%{transform: translate(0,+63vh);}   
- to{transform: translate(0,0);}
+
+@keyframes rightSlideOne {
+    from{transform: translate(500px,0px); opacity: 0.75;}
+    5%{transform: translate(490px,25px);}
+    10%{transform: translate(480px,50px);}
+    15%{transform: translate(470px,75px);}
+    20%{transform: translate(460px,100px);}
+    25%{transform: translate(450px,125px);}
+    30%{transform: translate(440px,175px);}
+    35%{transform: translate(430px,225px);}
+    40%{transform: translate(425px,275px);}
+    45%{transform: translate(420x,325px);}
+    50%{transform: translate(415px,375px); opacity: 0.5;}
+    55%{transform: translate(410px,425px);}   
+    60%{transform: translate(405px,475px);}   
+    65%{transform: translate(400px,525px);}   
+    70%{transform: translate(400px,575px);}   
+    75%{transform: translate(400px,625px);}   
+    80%{transform: translate(400px,675px);}   
+    85%{transform: translate(400px,700px);}   
+    90%{transform: translate(400px,725px);}   
+    95%{transform: translate(400px,750px);}      
+    to{transform: translate(400px,760px);}  
 }
 
 /* Sounds */
+
 #arnold-clothes:active + #arnold-clothes-mp3 { 
     display: block; 
 }
