@@ -27,11 +27,16 @@ body {
   animation-delay: 2s;
   animation-fill-mode: forwards;
 }
+#enter-music {
+  position: absolute;
+  visibility: hidden;
+}
 
 main {
   display: flex;
   width: 100%;
-  max-width: 1140px;
+  max-width: 1024px;
+  max-height: 768px;
   margin: 10px auto;
   position: relative;
   opacity: 0;
@@ -77,9 +82,6 @@ main {
   /*img-large-container is this links parent*/
   text-align: center;
   padding: 10px 15px;
-  color: red;
-  border: 2px solid red;
-  border-radius: 4px;
   cursor: crosshair;
   position: absolute;
   top: 50%;
@@ -89,7 +91,7 @@ main {
   text-decoration: none;
   z-index: 1; /*Needs z-index to be over images because of hirarchy structure in HTML*/
   animation-name: enter-link-ani;
-  animation-duration: 5s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 
@@ -114,51 +116,62 @@ main {
 #enter-link:hover ~ #inner-img {
   opacity: 1;
 }
-
 /***** End image section ******/
 /***animation section***/
-.left-side-animation {
-  border: 1px solid red;
-}
-
-.right-side-animation {
-  border: 1px solid blue;
-}
 /*Any suggestions for this animation? Maybe put in some sort of action when hoverd and paused?*/
-#box-three {
+#box-one {
   position: absolute;
   top: 100px;
   right: 80%;
-  background-color: rgb(7, 7, 248);
+  background-color: #d4ecdd;
   height: 150px;
   width: 150px;
   border-radius: 10%;
-  animation: box-ani-right-box-three;
+  animation: box-one-ani;
   opacity: 0;
   animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-play-state: running;
   animation-delay: 10s;
 }
-#box-three:hover {
+#box-one:hover {
   animation-play-state: paused;
   border-radius: 100%;
-  background-color: magenta;
+  background-color: #ff0075;
 }
 
-#box-four {
+#box-two {
   position: absolute;
-  background-color: red;
+  background-color: #ff0075;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   height: 90px;
   width: 20px;
   border-radius: 10%;
-  animation-name: box-ani-right-box-four;
+  animation-name: box-two-ani;
   animation-direction: reverse;
-  animation-duration: 5s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
+}
+
+#box-three {
+  position: absolute;
+  top: 100px;
+  right: 80%;
+  background-color: #d4ecdd;
+  height: 150px;
+  width: 150px;
+  border-radius: 10%;
+  animation: box-three-ani;
+  opacity: 0;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-delay: 17.5s;
+}
+
+#box-three:hover {
 }
 /***end of animation section***/
 /****** Start Keyframes ******/
@@ -187,32 +200,32 @@ main {
 }
 @keyframes enter-link-ani {
   0% {
-    border: 2px solid red;
-    color: red;
+    border: 2px solid #1db9c3;
+    color: #f56fad;
   }
   25% {
-    border: 4px solid hotpink;
-    color: indigo;
+    border: 4px solid #7027a0;
+    color: #c32bad;
   }
   50% {
-    border: 6px solid magenta;
-    color: blue;
+    border: 6px solid #c32bad;
+    color: #3e00ff;
   }
   51% {
-    border: 6px solid magenta;
-    color: blue;
+    border: 6px solid #c32bad;
+    color: #3e00ff;
   }
   75% {
-    border: 4px solid hotpink;
-    color: hotpink;
+    border: 4px solid #7027a0;
+    color: #c32bad;
   }
   100% {
-    border: 2px solid red;
-    color: red;
+    border: 2px solid #1db9c3;
+    color: #f56fad;
   }
 }
 
-@keyframes box-ani-right-box-three {
+@keyframes box-one-ani {
   0%,
   100% {
     transform: rotate(0deg);
@@ -257,66 +270,94 @@ main {
   }
 }
 
-@keyframes box-ani-right-box-four {
+@keyframes box-two-ani {
   0%,
   100% {
-    transform: rotate(0deg);
     animation-direction: reverse;
-    background-color: red;
+    background-color: #ff0075;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
   25% {
-    transform: rotate(1080deg);
     animation-direction: reverse;
-    background-color: hotpink;
+    background-color: #172774;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
   27% {
-    transform: rotate(1080deg);
     animation-direction: reverse;
-    background-color: hotpink;
+    background-color: #ff0000;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
 
   50% {
-    transform: rotate(0deg);
-    animation-direction: reverse;
-    background-color: magenta;
+    background-color: #77d970;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
   51% {
-    transform: rotate(0deg);
-    animation-direction: reverse;
-    background-color: magenta;
+    background-color: #3e00ff;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
   75% {
-    transform: rotate(1080deg);
     animation-direction: reverse;
-    background-color: purple;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  77% {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  99% {
+    background-color: #511281;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
 }
+
+@keyframes box-three-ani {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    right: 5%;
+    top: 1%;
+    opacity: 1;
+  }
+  25% {
+    transform: rotate(1080deg);
+    right: 5%;
+    opacity: 1;
+  }
+  27% {
+    transform: rotate(1080deg);
+    top: 79%;
+    right: 5%;
+    opacity: 0.2;
+  }
+  50% {
+    transform: rotate(0deg);
+    top: 79%;
+    right: 86%;
+    opacity: 0.2;
+  }
+  51% {
+    transform: rotate(0deg);
+    top: 79%;
+    right: 86%;
+    opacity: 1;
+  }
+  75% {
+    transform: rotate(1080deg);
+    top: 5%;
+    right: 86%;
+    opacity: 1;
+  }
+  77% {
+    opacity: 0.2;
+  }
+  99% {
+    opacity: 0.2;
+  }
+}
+
 /***** End keyframes *****/
