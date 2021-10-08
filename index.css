@@ -135,7 +135,7 @@ main {
   animation-delay: 10s;
 }
 #box-one:hover {
-  animation-play-state: paused;
+  /* animation-play-state: paused; */
   border-radius: 100%;
   background-color: #ff0075;
 }
@@ -168,7 +168,7 @@ main {
   animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-play-state: running;
-  animation-delay: 17.5s;
+  animation-delay: 17.7s;
 }
 
 #box-three:hover {
@@ -230,7 +230,7 @@ main {
   100% {
     transform: rotate(0deg);
     right: 5%;
-    top: 1%;
+    top: 2%;
     opacity: 1;
   }
   25% {
@@ -250,15 +250,15 @@ main {
     right: 86%;
     opacity: 0.2;
   }
-  51% {
+  /*   51% {
     transform: rotate(0deg);
     top: 79%;
     right: 86%;
     opacity: 1;
-  }
+  } */
   75% {
     transform: rotate(1080deg);
-    top: 5%;
+    top: 2%;
     right: 86%;
     opacity: 1;
   }
@@ -301,10 +301,10 @@ main {
     transform: translate(-50%, -50%);
   }
   51% {
-    background-color: #3e00ff;
+    /*     background-color: #3e00ff;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
   }
   75% {
     animation-direction: reverse;
@@ -320,7 +320,7 @@ main {
   100% {
     transform: rotate(0deg);
     right: 5%;
-    top: 1%;
+    top: 2%;
     opacity: 1;
   }
   25% {
@@ -340,15 +340,15 @@ main {
     right: 86%;
     opacity: 0.2;
   }
-  51% {
+  /*   51% {
     transform: rotate(0deg);
     top: 79%;
     right: 86%;
     opacity: 1;
-  }
+  } */
   75% {
     transform: rotate(1080deg);
-    top: 5%;
+    top: 2%;
     right: 86%;
     opacity: 1;
   }
