@@ -23,7 +23,7 @@ body {
   top: 25px;
   opacity: 0;
   animation-name: fade-in-arnold;
-  animation-duration: 8s;
+  animation-duration: 9s;
   animation-delay: 2s;
   animation-fill-mode: forwards;
 }
@@ -112,6 +112,18 @@ main {
   transition: 0.5s ease;
 }
 
+#arnold-head-box-four-img {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  opacity: 0;
+}
+#arnold-head-box-four-img:hover {
+  opacity: 1;
+  border-radius: 100%;
+  border: 4px solid #c70d3a;
+}
+
 /*Hover the link to make the inner-img visible function*/
 #enter-link:hover ~ #inner-img {
   opacity: 1;
@@ -121,9 +133,7 @@ main {
 /*Any suggestions for this animation? Maybe put in some sort of action when hoverd and paused?*/
 #box-one {
   position: absolute;
-  top: 100px;
-  right: 80%;
-  background-color: #d4ecdd;
+  background-color: #003f5c;
   height: 150px;
   width: 150px;
   border-radius: 10%;
@@ -135,31 +145,29 @@ main {
   animation-delay: 10s;
 }
 #box-one:hover {
-  /* animation-play-state: paused; */
-  border-radius: 100%;
-  background-color: #ff0075;
+  height: 130px;
+  width: 170px;
+  border-radius: 70%;
 }
 
 #box-two {
   position: absolute;
   background-color: #ff0075;
-  left: 50%;
-  top: 50%;
   transform: translate(-50%, -50%);
   height: 90px;
   width: 20px;
   border-radius: 10%;
   animation-name: box-two-ani;
-  animation-direction: reverse;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 
 #box-three {
   position: absolute;
-  top: 100px;
-  right: 80%;
-  background-color: #d4ecdd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #16697a;
   height: 150px;
   width: 150px;
   border-radius: 10%;
@@ -168,13 +176,40 @@ main {
   animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-play-state: running;
-  animation-delay: 17.7s;
+  animation-delay: 13.75s;
 }
 
 #box-three:hover {
+  border-radius: 100%;
 }
-/***end of animation section***/
-/****** Start Keyframes ******/
+
+#box-four {
+  position: absolute;
+  background-color: #d4ecdd;
+  height: 150px;
+  width: 150px;
+  border-radius: 10%;
+  animation: box-four-ani;
+  opacity: 0;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  animation-delay: 17.5s;
+  background-image: linear-gradient(
+    #142850 25%,
+    #27496d 25%,
+    #27496d 50%,
+    #0c7b93 50%,
+    #0c7b93 75%,
+    #00a8cc 75%
+  );
+}
+
+#box-four:hover {
+  border-radius: 100%;
+}
+/******end of animation section******/
+/*** Start Keyframes ***/
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -250,19 +285,19 @@ main {
     right: 86%;
     opacity: 0.2;
   }
-  /*   51% {
+  51% {
     transform: rotate(0deg);
     top: 79%;
     right: 86%;
     opacity: 1;
-  } */
-  75% {
+  }
+  76% {
     transform: rotate(1080deg);
     top: 2%;
     right: 86%;
     opacity: 1;
   }
-  77% {
+  78% {
     opacity: 0.2;
   }
   99% {
@@ -300,12 +335,6 @@ main {
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  51% {
-    /*     background-color: #3e00ff;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); */
-  }
   75% {
     animation-direction: reverse;
     background-color: #511281;
@@ -316,6 +345,62 @@ main {
 }
 
 @keyframes box-three-ani {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    right: 5%;
+    top: 2%;
+    opacity: 1;
+    background-color: #090088;
+    color: #c72c41;
+  }
+  25% {
+    transform: rotate(1080deg);
+    right: 5%;
+    opacity: 1;
+    background-color: #c72c41;
+    color: #090088;
+  }
+  27% {
+    transform: rotate(1080deg);
+    top: 79%;
+    right: 5%;
+    opacity: 0.2;
+    background-color: #ffa62b;
+    color: #46b5d1;
+  }
+  50% {
+    transform: rotate(0deg);
+    top: 79%;
+    right: 86%;
+    opacity: 0.2;
+    background-color: #46b5d1;
+    color: #ffa62b;
+  }
+  51% {
+    transform: rotate(0deg);
+    top: 79%;
+    right: 86%;
+    opacity: 1;
+    background-color: #db6400;
+    color: #090088;
+  }
+  76% {
+    transform: rotate(1080deg);
+    top: 2%;
+    right: 86%;
+    opacity: 1;
+    background-color: #16697a;
+  }
+  78% {
+    opacity: 0.2;
+  }
+  99% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes box-four-ani {
   0%,
   100% {
     transform: rotate(0deg);
@@ -340,24 +425,27 @@ main {
     right: 86%;
     opacity: 0.2;
   }
-  /*   51% {
+  51% {
     transform: rotate(0deg);
     top: 79%;
     right: 86%;
     opacity: 1;
-  } */
-  75% {
+  }
+  76% {
     transform: rotate(1080deg);
     top: 2%;
     right: 86%;
     opacity: 1;
   }
-  77% {
+  78% {
     opacity: 0.2;
   }
   99% {
     opacity: 0.2;
   }
+  to {
+    background-position: 0 -300vh;
+  }
 }
 
-/***** End keyframes *****/
+/****** End keyframes ******/
