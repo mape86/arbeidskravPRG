@@ -32,6 +32,25 @@ body {
   visibility: hidden;
 }
 
+#header-flex {
+  position: relative;
+  display: flex;
+  background-color: transparent;
+  color: #aaaaaa;
+  justify-content: space-around;
+  font-family: sans-serif;
+  font-size: xx-large;
+  text-shadow: 0px 0px 8px #fa1e0e;
+  top: 0%;
+  right: 0px;
+  height: 30px;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-delay: 10s;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
 main {
   display: flex;
   width: 100%;
@@ -118,6 +137,7 @@ main {
   width: 150px;
   opacity: 0;
 }
+
 #arnold-head-box-four-img:hover {
   opacity: 1;
   border-radius: 100%;
@@ -143,7 +163,9 @@ main {
   animation-iteration-count: infinite;
   animation-play-state: running;
   animation-delay: 10s;
+  box-shadow: 5px 5px 30px #aaaaaa;
 }
+
 #box-one:hover {
   height: 130px;
   width: 170px;
@@ -207,6 +229,14 @@ main {
 
 #box-four:hover {
   border-radius: 100%;
+  background-image: linear-gradient(
+    #f45905 25%,
+    #c70d3a 25%,
+    #ff0000 50%,
+    #c400c6 50%,
+    #512c62 75%,
+    #45969b 75%
+  );
 }
 /******end of animation section******/
 /*** Start Keyframes ***/
@@ -233,6 +263,7 @@ main {
     z-index: -1;
   }
 }
+
 @keyframes enter-link-ani {
   0% {
     border: 2px solid #1db9c3;
@@ -275,19 +306,19 @@ main {
   }
   27% {
     transform: rotate(1080deg);
-    top: 79%;
+    top: 80%;
     right: 5%;
     opacity: 0.2;
   }
   50% {
     transform: rotate(0deg);
-    top: 79%;
+    top: 80%;
     right: 86%;
     opacity: 0.2;
   }
   51% {
     transform: rotate(0deg);
-    top: 79%;
+    top: 80%;
     right: 86%;
     opacity: 1;
   }
@@ -363,7 +394,7 @@ main {
   }
   27% {
     transform: rotate(1080deg);
-    top: 79%;
+    top: 80%;
     right: 5%;
     opacity: 0.2;
     background-color: #ffa62b;
@@ -371,7 +402,7 @@ main {
   }
   50% {
     transform: rotate(0deg);
-    top: 79%;
+    top: 80%;
     right: 86%;
     opacity: 0.2;
     background-color: #46b5d1;
@@ -379,7 +410,7 @@ main {
   }
   51% {
     transform: rotate(0deg);
-    top: 79%;
+    top: 80%;
     right: 86%;
     opacity: 1;
     background-color: #db6400;
@@ -415,19 +446,19 @@ main {
   }
   27% {
     transform: rotate(1080deg);
-    top: 79%;
+    top: 80%;
     right: 5%;
     opacity: 0.2;
   }
   50% {
     transform: rotate(0deg);
-    top: 79%;
+    top: 80%;
     right: 86%;
     opacity: 0.2;
   }
   51% {
     transform: rotate(0deg);
-    top: 79%;
+    top: 80%;
     right: 86%;
     opacity: 1;
   }
