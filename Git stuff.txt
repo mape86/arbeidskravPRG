@@ -1,0 +1,74 @@
+
+
+.animated-arnold {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+
+  animation: arnold-animation 30s ease infinite;
+
+.img-large-container:hover .inner-img {
+  transform: scale(1.2);
+
+
+/*@keyframes arnold-animation {
+  0%,
+  100% {
+    top: 50px;
+    left: 50px;
+    transform: rotate(0);
+  }
+  25% {
+    top: 90%;
+    left: 50px;
+    transform: rotate(0);
+  }
+  27% {
+    top: 90%;
+    left: 50px;
+    transform: rotate(90deg);
+  }
+  50% {
+    top: 90%;
+    left: 90%;
+    transform: rotate(90deg);
+  }
+  52% {
+    top: 90%;
+    left: 90%;
+    transform: rotate(180deg);
+  }
+  75% {
+    top: 50px;
+    left: 90%;
+    transform: rotate(180deg);
+  }
+  99% {
+    top: 50px;
+    left: 50px;
+    transform: rotate(180deg);
+  }
+
+background:
+
+body {
+  background-image: url(/images/backgroundIndex.jpg);
+  background-size: cover;
+  animation-name: arnold-start;
+  opacity: 0;
+  animation-duration: 8s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+}
+
+
+
+#div-black-box {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+}
+
+arbeidskrav prog, tenary operator:
+person1 === 0 ? person2 = 1 : person2 = 0
